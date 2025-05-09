@@ -3,85 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="EduPeople: Una página educativa para estudiantes de universidad y preparatoria que impulsa el aprendizaje y el crecimiento cultural.">
-    <meta name="keywords" content="educación, aprendizaje, cultura, estudiantes, universidad, preparatoria">
+    <meta name="description" content="EduPeople - Una plataforma educativa para estudiantes de universidad y preparatoria.">
+    <meta name="keywords" content="educación, aprendizaje, cultura, arte, ciencia, matemáticas, México">
     <meta name="author" content="EduPeople">
     <title>EduPeople - Aprende y Crece</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Pacifico&family=Lobster&family=Fredoka&family=Nunito&family=Chewy&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logo">
             <h1>EduPeople</h1>
+            <p>Impulsando el aprendizaje y el crecimiento cultural</p>
         </div>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#artes">Artes</a></li>
-                <li><a href="#ciencias">Ciencias</a></li>
-                <li><a href="#cultura-global">Cultura Global</a></li>
-                <li><a href="#mexico">México</a></li>
-                <li><a href="#matematicas">Matemáticas</a></li>
+                <li><a href="#temas">Temas</a></li>
                 <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#acerca">Acerca de</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="inicio" class="welcome">
+    <section id="inicio" class="welcome-section">
         <h2>Bienvenido a EduPeople</h2>
-        <p>Impulsa tu aprendizaje y crecimiento cultural de manera divertida y rápida.</p>
-        <button id="welcome-btn">Descubre más</button>
+        <p>Descubre, aprende y crece con nosotros.</p>
+        <button id="welcome-btn">¡Comienza ahora!</button>
     </section>
 
-    <main>
-        <section id="artes" class="module">
-            <h2>Artes</h2>
-            <p>Explora el mundo del arte a través de la pintura, música, teatro y más.</p>
-            <div class="image-placeholder">[Espacio para imagen]</div>
-        </section>
-
-        <section id="ciencias" class="module">
-            <h2>Ciencias</h2>
-            <p>Descubre conceptos científicos fascinantes y cómo se aplican en el mundo real.</p>
-            <div class="image-placeholder">[Espacio para imagen]</div>
-        </section>
-
-        <section id="cultura-global" class="module">
-            <h2>Cultura Global</h2>
-            <p>Conoce las tradiciones y costumbres de diferentes partes del mundo.</p>
-            <div class="image-placeholder">[Espacio para imagen]</div>
-        </section>
-
-        <section id="mexico" class="module">
-            <h2>México</h2>
-            <p>Aprende sobre la rica historia, cultura y patrimonio de México.</p>
-            <div class="image-placeholder">[Espacio para imagen]</div>
-        </section>
-
-        <section id="matematicas" class="module">
-            <h2>Matemáticas</h2>
-            <p>Refuerza tus conocimientos matemáticos con recursos prácticos.</p>
-            <div class="image-placeholder">[Espacio para imagen]</div>
-        </section>
-
-        <section id="recursos" class="gallery">
-            <h2>Galería de Recursos</h2>
-            <div class="grid">
-                <div class="resource-item">[Recurso 1]</div>
-                <div class="resource-item">[Recurso 2]</div>
-                <div class="resource-item">[Recurso 3]</div>
+    <section id="temas" class="topics-section">
+        <h2>Nuestros Temas</h2>
+        <div class="topics-carousel">
+            <div class="topic-card" id="artes">
+                <img src="assets/images/art.jpg" alt="Arte">
+                <h3>Arte</h3>
+                <p>Explora el mundo del arte y la creatividad.</p>
             </div>
-        </section>
-    </main>
+            <div class="topic-card" id="ciencias">
+                <img src="assets/images/science.jpg" alt="Ciencia">
+                <h3>Ciencia</h3>
+                <p>Descubre los secretos del universo.</p>
+            </div>
+            <div class="topic-card" id="cultura-global">
+                <img src="assets/images/culture.jpg" alt="Cultura Global">
+                <h3>Cultura Global</h3>
+                <p>Conoce las maravillas del mundo.</p>
+            </div>
+            <div class="topic-card" id="mexico">
+                <img src="assets/images/mexico.jpg" alt="México">
+                <h3>México</h3>
+                <p>Sumérgete en la riqueza cultural de México.</p>
+            </div>
+            <div class="topic-card" id="matematicas">
+                <img src="assets/images/math.jpg" alt="Matemáticas">
+                <h3>Matemáticas</h3>
+                <p>Resuelve problemas y diviértete con números.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="recursos" class="resources-section">
+        <h2>Recursos</h2>
+        <div class="resources-gallery">
+            <div class="resource-item">Recurso 1</div>
+            <div class="resource-item">Recurso 2</div>
+            <div class="resource-item">Recurso 3</div>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2025 EduPeople. Todos los derechos reservados.</p>
-        <div class="social-icons">
+        <div class="social-links">
             <a href="#">Facebook</a>
             <a href="#">Twitter</a>
             <a href="#">Instagram</a>
         </div>
+    </footer>
+
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
     </footer>
 
     <script src="script.js"></script>
