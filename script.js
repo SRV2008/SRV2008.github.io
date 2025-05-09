@@ -1,28 +1,27 @@
 // Botón de bienvenida
-document.getElementById('welcome-btn').addEventListener('click', () => {
-    alert('¡Bienvenido a EduPeople! Explora y aprende con nosotros.');
+document.getElementById('btn-bienvenida').addEventListener('click', () => {
+    alert('¡Bienvenido a EduPeople! Explora y aprende.');
+});
+
+// Cambiar contenido dinámicamente
+document.querySelectorAll('.tarjeta').forEach(tarjeta => {
+    tarjeta.addEventListener('click', () => {
+        const tema = tarjeta.getAttribute('data-tema');
+        alert(`Has seleccionado el tema: ${tema}`);
+    });
 });
 
 // Resaltar sección activa en el menú
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('nav ul li a');
-
 window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 60) {
-            current = section.getAttribute('id');
-        }
-    });
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('header nav ul li a');
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-            link.classList.add('active');
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            const activeLink = document.querySelector(`header nav ul li a[href="#${section.id}"]`);
+            if (activeLink) activeLink.classList.add('active');
         }
     });
 });
-
-// Sistema de búsqueda (placeholder para implementación futura)
-console.log('Sistema de búsqueda pendiente de implementación.');
